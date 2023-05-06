@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lru
-Tue May  2 20:31:53 2023
+Sat May  6 16:41:12 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,11 +13,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,15 +44,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May  2 20:31:53 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat May  6 16:41:12 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lru                                             ;
 ; Top-level Entity Name              ; lru                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 248                                             ;
-;     Total combinational functions  ; 248                                             ;
-;     Dedicated logic registers      ; 110                                             ;
-; Total registers                    ; 110                                             ;
+; Total logic elements               ; 381                                             ;
+;     Total combinational functions  ; 381                                             ;
+;     Dedicated logic registers      ; 101                                             ;
+; Total registers                    ; 101                                             ;
 ; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -156,13 +157,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
-; lru.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documentos/lru/lru.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+------------------------------+--------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path         ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------+---------+
+; timer.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documentos/lru/timer.sv ;         ;
+; lru.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documentos/lru/lru.sv   ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -170,28 +172,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 248   ;
+; Estimated Total logic elements              ; 381   ;
 ;                                             ;       ;
-; Total combinational functions               ; 248   ;
+; Total combinational functions               ; 381   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 88    ;
-;     -- 3 input functions                    ; 87    ;
-;     -- <=2 input functions                  ; 73    ;
+;     -- 4 input functions                    ; 185   ;
+;     -- 3 input functions                    ; 104   ;
+;     -- <=2 input functions                  ; 92    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 164   ;
-;     -- arithmetic mode                      ; 84    ;
+;     -- normal mode                          ; 305   ;
+;     -- arithmetic mode                      ; 76    ;
 ;                                             ;       ;
-; Total registers                             ; 110   ;
-;     -- Dedicated logic registers            ; 110   ;
+; Total registers                             ; 101   ;
+;     -- Dedicated logic registers            ; 101   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 12    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 110   ;
-; Total fan-out                               ; 1057  ;
-; Average fan-out                             ; 2.86  ;
+; Maximum fan-out                             ; 101   ;
+; Total fan-out                               ; 1514  ;
+; Average fan-out                             ; 3.06  ;
 +---------------------------------------------+-------+
 
 
@@ -200,9 +202,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |lru                       ; 248 (248)         ; 110 (110)    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |lru                ; work         ;
+; |lru                       ; 381 (305)         ; 101 (68)     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |lru                ; work         ;
+;    |timer:t|               ; 76 (76)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lru|timer:t        ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; pressedIndex[3]                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -210,35 +223,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 110   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 101   ;
+; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 77    ;
+; Number of registers using Clock Enable       ; 68    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; index[2]                                ; 5       ;
-; index[0]                                ; 5       ;
-; index_value[9]                          ; 5       ;
-; index_value[8]                          ; 5       ;
-; index_value[7]                          ; 5       ;
-; index_value[6]                          ; 5       ;
-; index_value[5]                          ; 5       ;
-; index_value[4]                          ; 5       ;
-; index_value[3]                          ; 5       ;
-; index_value[2]                          ; 5       ;
-; index_value[1]                          ; 5       ;
-; index_value[0]                          ; 5       ;
-; Total number of inverted registers = 12 ;         ;
-+-----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -246,13 +238,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lru|used_counter[0][1]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lru|used_counter[1][0]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lru|used_counter[2][0]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lru|used_counter[3][0]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lru|used_counter[4][1]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |lru|index[2]              ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |lru|index_value[9]        ;
+; 3:1                ; 65 bits   ; 130 LEs       ; 65 LEs               ; 65 LEs                 ; Yes        ; |lru|timer[1]              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lru|timer:t|counter[14]   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |lru|used_counter          ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; No         ; |lru|used_counter          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |lru|pressedIndex          ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; No         ; |lru|used_counter          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -271,24 +268,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May  2 20:31:52 2023
+    Info: Processing started: Sat May  6 16:41:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lru -c lru
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file timer.sv
+    Info (12023): Found entity 1: timer
 Info (12021): Found 1 design units, including 1 entities, in source file lru.sv
     Info (12023): Found entity 1: lru
 Info (12021): Found 1 design units, including 1 entities, in source file tb_lru.sv
     Info (12023): Found entity 1: tb_lru
 Info (12127): Elaborating entity "lru" for the top level hierarchy
+Info (12128): Elaborating entity "timer" for hierarchy "timer:t"
+Info (144001): Generated suppressed messages file /home/noname/Documentos/lru/output_files/lru.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 395 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 253 logic cells
+    Info (21061): Implemented 383 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 590 megabytes
-    Info: Processing ended: Tue May  2 20:31:53 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat May  6 16:41:12 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/noname/Documentos/lru/output_files/lru.map.smsg.
 
 

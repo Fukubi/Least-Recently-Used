@@ -1,0 +1,22 @@
+/home/noname/Documentos/lru/lru.sv {1 {vlog -work work -sv /home/noname/Documentos/lru/lru.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module lru
+
+Top level modules:
+	lru
+
+} {} {}} /home/noname/Documentos/lru/tb_lru.sv {1 {vlog -work work -sv /home/noname/Documentos/lru/tb_lru.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_lru
+
+Top level modules:
+	tb_lru
+
+} {} {}} /home/noname/Documentos/lru/timer.sv {1 {vlog -work work -sv /home/noname/Documentos/lru/timer.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module timer
+
+Top level modules:
+	timer
+
+} {} {}}
