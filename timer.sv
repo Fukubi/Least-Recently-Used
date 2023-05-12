@@ -1,4 +1,4 @@
-`define TIME_50MHZ 32'd49999999
+`define TIME_50MHZ 32'd24999999
 `define TIME_SIM 32'd5
 
 module timer(clk, rst, timedClk);
