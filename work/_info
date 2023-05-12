@@ -5,67 +5,67 @@ cModel Technology
 Z0 d/home/noname
 vlru
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 !s100 ZoCnOzAYGL8]2:@`<4_0;3
-Z3 I3lChj:dhAaWEB^LkG7UE11
-Z4 V:EUF<MTn75M`KG>S;l]>T0
-Z5 !s105 lru_sv_unit
+Z2 IhLaB^1MnW;6UbBnX8OLzk2
+Z3 Vad53oColH^JcZ?aXhhTG[2
+Z4 !s105 lru_sv_unit
 S1
-Z6 d/home/noname/Documentos/lru
-Z7 w1683401599
-Z8 8/home/noname/Documentos/lru/lru.sv
-Z9 F/home/noname/Documentos/lru/lru.sv
+Z5 d/home/noname/Documentos/lru
+Z6 w1683855073
+Z7 8/home/noname/Documentos/lru/lru.sv
+Z8 F/home/noname/Documentos/lru/lru.sv
 L0 1
-Z10 OV;L;10.1d;51
+Z9 OV;L;10.1d;51
 r1
 31
-Z11 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/lru.sv|
-Z12 o-work work -sv -O0
-Z13 !s108 1683401909.417447
+Z10 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/lru.sv|
+Z11 o-work work -sv -O0
+Z12 !s100 XIZZiYzTPQ<:eTF]dIZb53
+Z13 !s108 1683855075.190087
 Z14 !s107 /home/noname/Documentos/lru/lru.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vtb_lru
 R1
-Z15 !s100 ZcRRCbXA@?L_2KAU:38de2
-Z16 IKl=5`JnAf<k`?eLRB[7880
+Z15 !s100 STc38h4BOkKjPIZ@U?7562
+Z16 I0>Akz<oOHoa0gPj9W>0WE1
 Z17 VAC<j6io3XIUUm7gP^lohi1
 Z18 !s105 tb_lru_sv_unit
 S1
-R6
-Z19 w1683401888
+R5
+Z19 w1683855029
 Z20 8/home/noname/Documentos/lru/tb_lru.sv
 Z21 F/home/noname/Documentos/lru/tb_lru.sv
 L0 1
-R10
+R9
 r1
 31
 Z22 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/tb_lru.sv|
-R12
+R11
 !i10b 1
 !s85 0
-Z23 !s108 1683401909.438926
+Z23 !s108 1683855075.213834
 Z24 !s107 /home/noname/Documentos/lru/tb_lru.sv|
 !s101 -O0
 vtimer
 R1
 !i10b 1
-!s100 klZh:`>kBEz=l65P]NmZ62
-IZ0g9>;P39e_Sm31hSP6Yk2
-Z25 VcHld?W?[>3hJ3`hO>PWV^1
-Z26 !s105 timer_sv_unit
+Z25 !s100 klZh:`>kBEz=l65P]NmZ62
+Z26 IZ0g9>;P39e_Sm31hSP6Yk2
+Z27 VcHld?W?[>3hJ3`hO>PWV^1
+Z28 !s105 timer_sv_unit
 S1
-R6
-w1683401907
-Z27 8/home/noname/Documentos/lru/timer.sv
-Z28 F/home/noname/Documentos/lru/timer.sv
+R5
+Z29 w1683854620
+Z30 8/home/noname/Documentos/lru/timer.sv
+Z31 F/home/noname/Documentos/lru/timer.sv
 L0 4
-R10
+R9
 r1
 !s85 0
 31
-!s108 1683401909.459288
+!s108 1683855075.231791
 !s107 /home/noname/Documentos/lru/timer.sv|
-Z29 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/timer.sv|
+Z32 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/timer.sv|
 !s101 -O0
-R12
+R11

@@ -1,4 +1,12 @@
 # Compile of lru.sv was successful.
+# Compile of tb_lru.sv failed with 1 errors.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of lru.sv was successful.
+# Compile of tb_lru.sv failed with 1 errors.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of lru.sv was successful.
 # Compile of tb_lru.sv was successful.
 # Compile of timer.sv was successful.
 # 3 compiles, 0 failed with no errors. 

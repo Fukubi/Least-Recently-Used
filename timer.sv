@@ -14,7 +14,7 @@ module timer(clk, rst, timedClk);
     end else begin
       counter++;
 
-      if (counter == `TIME_50MHZ) begin
+      if (counter == `TIME_SIM) begin
         timedClk <= 1'd1;
         counter <= 32'd0;
       end else begin
