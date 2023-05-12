@@ -2,6 +2,18 @@
 
 A SystemVerilog description for a LRU
 
+## States
+
+```mermaid
+stateDiagram-v2
+	q0 : Initial State
+	q1 : Push to queue
+
+	[*] --> q0
+	q0 --> q1 : input
+	q1 --> q0 : queue_updated
+```
+
 ## How a LRU works
 
 The LRU saves the time when a input is pressed and, after the limit size is reached, it erases the input with the least recent time
@@ -10,8 +22,8 @@ The LRU saves the time when a input is pressed and, after the limit size is reac
 
 - clk : Clock
 - rst : Reset
-- b1, b2, b3, b4, b5 : The inputs, here represented as 5 buttons
-- l1, l2, l3, l4, l5 : LEDs to show if a input is active or not, if a LED is off then it means that it is not active
+- b1, b2, b3, b4: The inputs, here represented as 4 buttons
+- l1, l2, l3, l4: LEDs to show if a input is active or not, if a LED is off then it means that it is not active
 
 # IMPORTANT IF YOU WANT TO TEST!
 
