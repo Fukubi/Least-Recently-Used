@@ -44,7 +44,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         end
       end
       PUSH: begin
-          if (queue[2] == 0) queue = queue << 5;
+          queue = queue << 5;
 
           if (b1) begin
             queue[0] = 5'd1;

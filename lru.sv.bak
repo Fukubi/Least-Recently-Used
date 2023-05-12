@@ -23,7 +23,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         l3 = 1'b0;
         l4 = 1'b0;
 
-        stack = 25'd0;
+        queue = 25'd0;
       end
       INITIAL: begin
         l1 = 1'b0;

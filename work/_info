@@ -5,46 +5,46 @@ cModel Technology
 Z0 d/home/noname
 vlru
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 !s100 XIZZiYzTPQ<:eTF]dIZb53
-Z3 IhLaB^1MnW;6UbBnX8OLzk2
-Z4 Vad53oColH^JcZ?aXhhTG[2
-Z5 !s105 lru_sv_unit
+Z2 IH3HJD3RcL>JKiAOW_kZ[Y0
+Z3 Vad53oColH^JcZ?aXhhTG[2
+Z4 !s105 lru_sv_unit
 S1
-Z6 d/home/noname/Documentos/lru
-Z7 w1683855073
-Z8 8/home/noname/Documentos/lru/lru.sv
-Z9 F/home/noname/Documentos/lru/lru.sv
+Z5 d/home/noname/Documentos/lru
+Z6 w1683887816
+Z7 8/home/noname/Documentos/lru/lru.sv
+Z8 F/home/noname/Documentos/lru/lru.sv
 L0 1
-Z10 OV;L;10.1d;51
+Z9 OV;L;10.1d;51
 r1
 31
-Z11 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/lru.sv|
-Z12 o-work work -sv -O0
-Z13 !s108 1683855241.642525
+Z10 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/lru.sv|
+Z11 o-work work -sv -O0
+Z12 !s100 bk@_kD;Bo@ZjELNCzR^R91
+Z13 !s108 1683887820.824451
 Z14 !s107 /home/noname/Documentos/lru/lru.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vtb_lru
 R1
-Z15 !s100 STc38h4BOkKjPIZ@U?7562
-Z16 I0>Akz<oOHoa0gPj9W>0WE1
+Z15 !s100 NVMRU[P0^;YYkbmJT4Nk40
+Z16 I36H99DCgbg2XTnWlZDkg03
 Z17 VAC<j6io3XIUUm7gP^lohi1
 Z18 !s105 tb_lru_sv_unit
 S1
-R6
-Z19 w1683855029
+R5
+Z19 w1683887798
 Z20 8/home/noname/Documentos/lru/tb_lru.sv
 Z21 F/home/noname/Documentos/lru/tb_lru.sv
 L0 1
-R10
+R9
 r1
 31
 Z22 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/tb_lru.sv|
-R12
+R11
 !i10b 1
 !s85 0
-Z23 !s108 1683855241.661929
+Z23 !s108 1683887820.852427
 Z24 !s107 /home/noname/Documentos/lru/tb_lru.sv|
 !s101 -O0
 vtimer
@@ -55,17 +55,17 @@ Z26 IZ0g9>;P39e_Sm31hSP6Yk2
 Z27 VcHld?W?[>3hJ3`hO>PWV^1
 Z28 !s105 timer_sv_unit
 S1
-R6
-w1683855238
-Z29 8/home/noname/Documentos/lru/timer.sv
-Z30 F/home/noname/Documentos/lru/timer.sv
+R5
+Z29 w1683855238
+Z30 8/home/noname/Documentos/lru/timer.sv
+Z31 F/home/noname/Documentos/lru/timer.sv
 L0 4
-R10
+R9
 r1
 !s85 0
 31
-!s108 1683855241.679498
+!s108 1683887820.871833
 !s107 /home/noname/Documentos/lru/timer.sv|
-Z31 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/timer.sv|
+Z32 !s90 -reportprogress|300|-work|work|-sv|/home/noname/Documentos/lru/timer.sv|
 !s101 -O0
-R12
+R11

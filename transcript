@@ -2,3 +2,4 @@
 # Compile of tb_lru.sv was successful.
 # Compile of timer.sv was successful.
 # 3 compiles, 0 failed with no errors. 
+vsim -l /dev/null -gui work.tb_lru

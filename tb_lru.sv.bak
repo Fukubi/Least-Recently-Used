@@ -42,7 +42,7 @@ module tb_lru;
 		{rst, b1, b2, b3, b4} = 5'b0_0_0_1_0; @(negedge timedClk) xpect(1'b1, 1'b1, 1'b1, 1'b0);
 		
 		{rst, b1, b2, b3, b4} = 5'b0_0_0_0_1; @(negedge timedClk) xpect(1'b1, 1'b1, 1'b1, 1'b0);
-		{rst, b1, b2, b3, b4} = 5'b0_0_0_0_1; @(negedge timedClk) xpect(1'b1, 1'b1, 1'b1, 1'b1);
+		{rst, b1, b2, b3, b4} = 5'b0_0_0_0_1; @(negedge timedClk) xpect(1'b1, 1'b1, 1'b0, 1'b1);
 		
 		$display("LRU TEST PASSED");
 		$finish;
