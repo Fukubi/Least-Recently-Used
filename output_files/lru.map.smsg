@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at timer.sv(10): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at lru.sv(17): always construct contains both blocking and non-blocking assignments

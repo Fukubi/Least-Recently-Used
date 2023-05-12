@@ -23,7 +23,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         l3 = 1'b0;
         l4 = 1'b0;
 
-        queue = 25'd0;
+        queue = 15'd0;
       end
       INITIAL: begin
         l1 = 1'b0;
@@ -31,7 +31,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         l3 = 1'b0;
         l4 = 1'b0;
 
-        for (reg [2:0] i = 0; i < 3'd5; i++) begin
+        for (reg [2:0] i = 0; i < 3'd3; i++) begin
           if (queue[i] == 3'd1) begin
             l1 = 1'b1;
           end else if (queue[i] == 3'd2) begin
@@ -44,17 +44,34 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         end
       end
       PUSH: begin
-          queue = queue << 5;
-
-          if (b1) begin
-            queue[0] = 5'd1;
-          end else if (b2) begin
-            queue[0] = 5'd2;
-          end else if (b3) begin
-            queue[0] = 5'd3;
-          end else if (b4) begin
-            queue[0] = 5'd4;
+        l1 = 1'b0;
+        l2 = 1'b0;
+        l3 = 1'b0;
+        l4 = 1'b0;
+        
+        for (reg [2:0] i = 0; i < 3'd3; i++) begin
+          if (queue[i] == 3'd1) begin
+            l1 = 1'b1;
+          end else if (queue[i] == 3'd2) begin
+            l2 = 1'b1;
+          end else if (queue[i] == 3'd3) begin
+            l3 = 1'b1;
+          end else if (queue[i] == 3'd4) begin
+            l4 = 1'b1;
           end
+        end
+
+        queue = queue << 5;
+
+        if (b1) begin
+          queue[0] = 5'd1;
+        end else if (b2) begin
+          queue[0] = 5'd2;
+        end else if (b3) begin
+          queue[0] = 5'd3;
+        end else if (b4) begin
+          queue[0] = 5'd4;
+        end
       end
     endcase
   end
