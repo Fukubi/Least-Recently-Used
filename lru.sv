@@ -7,6 +7,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   reg timedClk;
 
   reg [2:0][4:0] queue;
+  reg [2:0][4:0] queue_ff;
 
   enum {BEGIN, INITIAL, PUSH} ActualState, NextState;
 
@@ -15,6 +16,8 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   always_comb begin
     if (rst) ActualState = BEGIN;
     else ActualState = NextState;
+	 
+	 queue = queue_ff;
 
     case (ActualState)
       BEGIN: begin
@@ -78,6 +81,7 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
 
   always_ff @(posedge timedClk) begin
     NextState <= ActualState;
+	 queue_ff <= queue;
 
     case (NextState)
       BEGIN: NextState <= INITIAL;
