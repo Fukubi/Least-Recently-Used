@@ -14,9 +14,6 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   timer t(.clk(clk), .rst(rst), .timedClk(timedClk));
 
   always_comb begin
-    if (rst) ActualState = BEGIN;
-    else ActualState = NextState;
-	 
 	 queue = queue_ff;
 
     case (ActualState)
@@ -79,14 +76,25 @@ module lru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
     endcase
   end
 
-  always_ff @(posedge timedClk) begin
-    NextState <= ActualState;
-	 queue_ff <= queue;
-
-    case (NextState)
-      BEGIN: NextState <= INITIAL;
-      INITIAL: if (b1 || b2 || b3 || b4) NextState <= PUSH;
-      PUSH: NextState <= INITIAL;
+  always_ff @(posedge timedClk, posedge rst) begin
+	 if (rst) begin
+		ActualState <= BEGIN;
+		
+		queue_ff <= 15'd0;
+	 end else begin
+		ActualState <= NextState;
+		
+		queue_ff <= queue;
+	 end
+  end
+  
+  always_comb begin
+	NextState = ActualState;
+	
+	case (NextState)
+      BEGIN: NextState = INITIAL;
+      INITIAL: if (b1 || b2 || b3 || b4) NextState = PUSH;
+      PUSH: NextState = INITIAL;
     endcase
   end
 endmodule
